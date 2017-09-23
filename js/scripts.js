@@ -41,3 +41,46 @@ function editarTarea(id, nuevoTitulo, nuevDesc) {
     	}
 }
 }
+
+
+function mostrarTareas(Tareas) {
+    var TareaFila =  function () {
+        var columna = "";
+        var beditar = "<input type='button' onclick='ClaseTodo.cambiarEstado()' value='EDITAR'>";
+        var beliminar = "<input type='button' onclick='removerTareas(id)' value='ELIMINAR'>";
+        var bcambiarestado = "<input type='button' onclick='cambiarEstado(id)' value='CAMBIAR ESTADO'>";
+
+        for (var i= 0 < tareas.length; i++ ) {
+            columna = columna + "<td>" + Tareas[i] + "</td>" + "<td>" + beditar + beliminar  + bcambiarestado + "</td>";
+        }    
+
+        fila == "<tr>" + columna + "</tr>"
+        return fila;    
+    }
+    document.getElementById("cuerpoTareas").innerHTML = TareaFila();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------
+
+function mostrar(c) {
+    
+     document.getElementById("lblNombre").innerHTML = c.Nombre; 
+     document.getElementById("lblApellido").innerHTML = c.Apellido; 
+     document.getElementById("lblTipDoc").innerHTML = c.TpDocumento; 
+     document.getElementById("lblNroDocumento").innerHTML = c.NroDocumento; 
+     document.getElementById("lblTelefono").innerHTML = c.Telefono; 
+     document.getElementById("lblEmail").innerHTML = c.Email; 
+ }
